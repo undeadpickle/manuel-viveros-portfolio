@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manuel Viveros Portfolio
+
+A minimalist, bilingual portfolio website for artist Manuel Viveros Segura, showcasing paintings, sculptures, sketches, photography, and travel journals.
+
+## Features
+
+- **Bilingual** - English (default) and Spanish with localized URLs
+- **Gallery System** - Thumbnail grid with lightbox slideshow
+- **CMS Integration** - Sanity.io for easy content management
+- **SEO Optimized** - Dynamic meta tags, structured data, sitemap
+- **Mobile First** - Responsive design across all devices
+- **Performance** - Image optimization via Sanity CDN
+
+## Tech Stack
+
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: Tailwind CSS v4
+- **CMS**: Sanity.io
+- **Animations**: Framer Motion
+- **Hosting**: Vercel
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+
+- npm or yarn
+- Sanity account (free tier)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/manuel-viveros-portfolio.git
+cd manuel-viveros-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+# Edit .env.local with your Sanity project credentials
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Run the development server:
+```bash
+npm run dev
+```
 
-## Learn More
+5. Open [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+### Sanity Studio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Access the content management studio at [http://localhost:3000/studio](http://localhost:3000/studio) (requires Sanity account).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+├── src/
+│   ├── app/[lang]/      # Pages with i18n routing
+│   ├── components/      # React components
+│   ├── lib/             # Utilities (Sanity client, i18n)
+│   └── dictionaries/    # UI translations (en.json, es.json)
+├── sanity/
+│   └── schemas/         # CMS content models
+├── docs/                # Documentation
+└── CLAUDE.md           # AI assistant context
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run dev        # Start development server
+npm run build      # Production build
+npm run start      # Start production server
+npm run lint       # Run ESLint
+npm run typecheck  # TypeScript type checking
+npm run sanity     # Start Sanity Studio locally
+```
+
+## Documentation
+
+- [Architecture](./docs/ARCHITECTURE.md) - System design and data flow
+- [Sanity Schemas](./docs/SANITY_SCHEMAS.md) - CMS content model reference
+- [i18n Guide](./docs/I18N.md) - Internationalization patterns
+- [Deployment](./docs/DEPLOYMENT.md) - Vercel deployment guide
+
+## License
+
+Private - All rights reserved.
+
+---
+
+Built with Next.js and Sanity for Manuel Viveros Segura.

@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "paintings": "Pinturas",
+    "sculptures": "Esculturas",
+    "sketches": "Bocetos",
+    "photography": "Fotografía",
+    "journals": "Diario",
+    "contact": "Contacto"
+  },
+  "home": {
+    "welcome": "Bienvenidos",
+    "featuredWork": "Obras Destacadas",
+    "viewAll": "Ver Todo",
+    "recentJournals": "Diario Reciente",
+    "artistStatement": "Declaración del Artista"
+  },
+  "gallery": {
+    "backToGallery": "Volver a la Galería",
+    "viewDetails": "Ver Detalles",
+    "year": "Año",
+    "medium": "Técnica",
+    "dimensions": "Dimensiones",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "close": "Cerrar",
+    "of": "de"
+  },
+  "journal": {
+    "readMore": "Leer Más",
+    "publishedOn": "Publicado el",
+    "location": "Ubicación",
+    "tags": "Etiquetas",
+    "backToJournals": "Volver al Diario"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Ponte en Contacto",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "followMe": "Sígueme",
+    "sendEmail": "Enviar Correo"
+  },
+  "footer": {
+    "copyright": "Todos los derechos reservados",
+    "arteLatino": "Arte Latinoamericano"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "notFound": "No Encontrado"
+  }
+}

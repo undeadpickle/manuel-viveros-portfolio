@@ -1,0 +1,53 @@
+{
+  "nav": {
+    "home": "Home",
+    "paintings": "Paintings",
+    "sculptures": "Sculptures",
+    "sketches": "Sketches",
+    "photography": "Photography",
+    "journals": "Journals",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome",
+    "featuredWork": "Featured Work",
+    "viewAll": "View All",
+    "recentJournals": "Recent Journals",
+    "artistStatement": "Artist Statement"
+  },
+  "gallery": {
+    "backToGallery": "Back to Gallery",
+    "viewDetails": "View Details",
+    "year": "Year",
+    "medium": "Medium",
+    "dimensions": "Dimensions",
+    "previous": "Previous",
+    "next": "Next",
+    "close": "Close",
+    "of": "of"
+  },
+  "journal": {
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "location": "Location",
+    "tags": "Tags",
+    "backToJournals": "Back to Journals"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Get in Touch",
+    "email": "Email",
+    "phone": "Phone",
+    "followMe": "Follow Me",
+    "sendEmail": "Send Email"
+  },
+  "footer": {
+    "copyright": "All rights reserved",
+    "arteLatino": "Arte Latinoamericano"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Not Found"
+  }
+}
