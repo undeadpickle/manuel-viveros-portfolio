@@ -75,9 +75,10 @@ vercel --prod
 1. Go to [sanity.io/manage](https://www.sanity.io/manage)
 2. Select your project
 3. Go to API → CORS origins
-4. Add your production domain:
-   - `https://manuelviveros.art`
-   - `https://your-project.vercel.app`
+4. Add origins (check "Allow credentials" for each):
+   - `http://localhost:3000` (for local dev)
+   - `https://manuelviveros.art` (production)
+   - `https://your-project.vercel.app` (preview deploys)
 
 ## Deployment Workflow
 
@@ -147,9 +148,10 @@ Content updates in Sanity are **immediately visible** on the site:
    - Import path issues
 
 ### Images Not Loading
-1. Verify Sanity CORS settings include your domain
-2. Check browser console for errors
-3. Verify `NEXT_PUBLIC_SANITY_PROJECT_ID` is correct
+1. Verify `cdn.sanity.io` is in `next.config.ts` remotePatterns
+2. Verify Sanity CORS settings include your domain
+3. Check browser console for errors
+4. Verify `NEXT_PUBLIC_SANITY_PROJECT_ID` is correct
 
 ### Studio Not Accessible
 1. Add production domain to Sanity CORS

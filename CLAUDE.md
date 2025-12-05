@@ -37,7 +37,10 @@ src/
 │   │   │   └── [slug]/      # Individual journal entry
 │   │   ├── contact/         # Contact page
 │   │   └── layout.tsx       # Lang layout with Header/Footer
-│   ├── layout.tsx           # Root layout (passthrough)
+│   ├── studio/[[...tool]]/  # Sanity Studio (embedded)
+│   │   ├── page.tsx         # NextStudio client component
+│   │   └── layout.tsx       # Full-screen layout wrapper
+│   ├── layout.tsx           # Root layout (html/body, fonts)
 │   └── globals.css          # Global styles + Tailwind
 ├── components/
 │   ├── layout/              # Header, Footer, PageTransition
@@ -54,11 +57,12 @@ src/
 └── middleware.ts            # Locale detection + redirects
 
 sanity/
-├── schemas/
-│   ├── artwork.ts           # Paintings, sculptures, sketches, photography
-│   ├── journal.ts           # Travel/blog entries
-│   └── siteSettings.ts      # Global config (contact, social, SEO)
-└── sanity.config.ts
+└── schemas/
+    ├── artwork.ts           # Paintings, sculptures, sketches, photography
+    ├── journal.ts           # Travel/blog entries
+    └── siteSettings.ts      # Global config (contact, social, SEO)
+
+sanity.config.ts             # Sanity Studio config (basePath: /studio)
 ```
 
 ## Key Patterns
