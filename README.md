@@ -32,7 +32,7 @@ A minimalist, bilingual portfolio website for artist Manuel Viveros Segura, show
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/manuel-viveros-portfolio.git
+git clone https://github.com/undeadpickle/manuel-viveros-portfolio.git
 cd manuel-viveros-portfolio
 ```
 
