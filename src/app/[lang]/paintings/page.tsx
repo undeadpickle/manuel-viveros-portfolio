@@ -1,0 +1,61 @@
+import type { Metadata } from 'next'
+import { client } from '@/lib/sanity'
+import { artworkByCategoryQuery } from '@/lib/queries'
+import { GalleryPage } from '@/components/gallery'
+import { getDictionary } from '@/dictionaries'
+import type { Locale } from '@/lib/i18n'
+import type { Artwork } from '@/components/gallery'
+
+interface PageProps {
+  params: Promise<{ lang: string }>
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { lang: langParam } = await params
+  const lang = langParam as Locale
+
+  const titles = {
+    en: 'Paintings',
+    es: 'Pinturas',
+  }
+
+  const descriptions = {
+    en: 'Explore the paintings of Manuel Viveros Segura. Oil paintings, acrylics, and mixed media artworks.',
+    es: 'Explora las pinturas de Manuel Viveros Segura. Óleos, acrílicos y obras de técnica mixta.',
+  }
+
+  return {
+    title: titles[lang],
+    description: descriptions[lang],
+    openGraph: {
+      title: `${titles[lang]} | Manuel Viveros`,
+      description: descriptions[lang],
+    },
+  }
+}
+
+async function getArtworks(): Promise<Artwork[]> {
+  return client.fetch(artworkByCategoryQuery, { category: 'painting' })
+}
+
+export default async function PaintingsPage({ params }: PageProps) {
+  const { lang: langParam } = await params
+  const lang = langParam as Locale
+  const [artworks] = await Promise.all([
+    getArtworks(),
+    getDictionary(lang),
+  ])
+
+  const titles = {
+    en: 'Paintings',
+    es: 'Pinturas',
+  }
+
+  return (
+    <GalleryPage
+      title={titles[lang]}
+      artworks={artworks}
+      lang={lang}
+    />
+  )
+}
