@@ -27,26 +27,28 @@ npm run lint         # ESLint
 src/
 ├── app/
 │   ├── [lang]/              # i18n route segment (en/es)
-│   │   ├── page.tsx         # Home
-│   │   ├── paintings/       # Paintings gallery → /es/pinturas
-│   │   ├── sculptures/      # Sculptures → /es/esculturas
-│   │   ├── sketches/        # Sketches → /es/bocetos
-│   │   ├── photography/     # Photography → /es/fotografia
-│   │   ├── journals/        # Journals → /es/diario
+│   │   ├── page.tsx         # Home (server wrapper)
+│   │   ├── HomePageClient.tsx  # Home page client component
+│   │   ├── paintings/       # Paintings gallery
+│   │   ├── sculptures/      # Sculptures gallery
+│   │   ├── sketches/        # Sketches gallery
+│   │   ├── photography/     # Photography gallery
+│   │   ├── journals/        # Journals listing
 │   │   │   └── [slug]/      # Individual journal entry
-│   │   └── contact/         # Contact → /es/contacto
+│   │   ├── contact/         # Contact page
+│   │   └── layout.tsx       # Lang layout with Header/Footer
 │   ├── layout.tsx           # Root layout (passthrough)
 │   └── globals.css          # Global styles + Tailwind
 ├── components/
-│   ├── layout/              # Header, Footer, Navigation
-│   ├── gallery/             # ThumbnailGrid, Lightbox, VideoPlayer
-│   ├── journal/             # JournalCard, JournalContent
-│   └── ui/                  # Reusable UI components
+│   ├── layout/              # Header, Footer, PageTransition
+│   ├── gallery/             # ThumbnailGrid, Lightbox, GalleryPage
+│   └── ui/                  # SocialLinks, reusable components
 ├── lib/
 │   ├── sanity.ts            # Sanity client + image helpers
 │   ├── queries.ts           # GROQ queries
 │   └── i18n.ts              # Internationalization utilities
 ├── dictionaries/
+│   ├── index.ts             # Dictionary loader
 │   ├── en.json              # English UI strings
 │   └── es.json              # Spanish UI strings
 └── middleware.ts            # Locale detection + redirects
@@ -77,9 +79,9 @@ const title = getLocalizedValue(artwork.title, lang)
 
 ### URL Routing
 - English: `/en/paintings`, `/en/sculptures`, etc.
-- Spanish: `/es/pinturas`, `/es/esculturas`, etc.
+- Spanish: `/es/paintings`, `/es/sculptures`, etc. (same paths, different lang prefix)
 - Middleware auto-redirects `/` → `/en`
-- Route mappings in `src/lib/i18n.ts`
+- Route translations defined in `src/lib/i18n.ts` (for future localized URLs)
 
 ### Gallery Pages
 All gallery pages follow the same pattern:
