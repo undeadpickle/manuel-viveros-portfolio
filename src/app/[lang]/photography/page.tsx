@@ -5,6 +5,7 @@ import { GalleryPage } from '@/components/gallery'
 import { getDictionary } from '@/dictionaries'
 import type { Locale } from '@/lib/i18n'
 import type { Artwork } from '@/components/gallery'
+import { CollectionJsonLd } from '@/components/seo'
 
 interface PageProps {
   params: Promise<{ lang: string }>
@@ -51,11 +52,24 @@ export default async function PhotographyPage({ params }: PageProps) {
     es: 'Fotografía',
   }
 
+  const descriptions = {
+    en: 'Explore the photography of Manuel Viveros Segura. Documentary, portrait, and landscape photography.',
+    es: 'Explora la fotografía de Manuel Viveros Segura. Fotografía documental, de retrato y paisaje.',
+  }
+
   return (
-    <GalleryPage
-      title={titles[lang]}
-      artworks={artworks}
-      lang={lang}
-    />
+    <>
+      <CollectionJsonLd
+        name={titles[lang]}
+        description={descriptions[lang]}
+        numberOfItems={artworks.length}
+        lang={lang}
+      />
+      <GalleryPage
+        title={titles[lang]}
+        artworks={artworks}
+        lang={lang}
+      />
+    </>
   )
 }

@@ -5,6 +5,7 @@ import { GalleryPage } from '@/components/gallery'
 import { getDictionary } from '@/dictionaries'
 import type { Locale } from '@/lib/i18n'
 import type { Artwork } from '@/components/gallery'
+import { CollectionJsonLd } from '@/components/seo'
 
 interface PageProps {
   params: Promise<{ lang: string }>
@@ -51,11 +52,24 @@ export default async function SculpturesPage({ params }: PageProps) {
     es: 'Esculturas',
   }
 
+  const descriptions = {
+    en: 'Explore the sculptures of Manuel Viveros Segura. Bronze, ceramic, and mixed media sculptural works.',
+    es: 'Explora las esculturas de Manuel Viveros Segura. Bronce, cerámica y obras escultóricas de técnica mixta.',
+  }
+
   return (
-    <GalleryPage
-      title={titles[lang]}
-      artworks={artworks}
-      lang={lang}
-    />
+    <>
+      <CollectionJsonLd
+        name={titles[lang]}
+        description={descriptions[lang]}
+        numberOfItems={artworks.length}
+        lang={lang}
+      />
+      <GalleryPage
+        title={titles[lang]}
+        artworks={artworks}
+        lang={lang}
+      />
+    </>
   )
 }
