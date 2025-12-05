@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import Image from 'next/image'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 import { getImageUrl } from '@/lib/sanity'
 import type { Artwork } from './ThumbnailGrid'
@@ -49,6 +49,15 @@ const imageVariants = {
 
 const SWIPE_THRESHOLD = 50
 
+// Custom hook for client-side only rendering
+function useIsMounted() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
+}
+
 export default function Lightbox({
   artworks,
   currentIndex,
@@ -57,22 +66,18 @@ export default function Lightbox({
   onNavigate,
 }: LightboxProps) {
   const [direction, setDirection] = useState(0)
-  const [mounted, setMounted] = useState(false)
-  const [imageLoaded, setImageLoaded] = useState(false)
+  // Track loaded images by their ID
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set())
+  const mounted = useIsMounted()
 
   const currentArtwork = artworks[currentIndex]
   const hasNext = currentIndex < artworks.length - 1
   const hasPrev = currentIndex > 0
+  const imageLoaded = loadedImages.has(currentArtwork._id)
 
-  useEffect(() => {
-    setMounted(true)
-    return () => setMounted(false)
-  }, [])
-
-  // Reset image loaded state when changing images
-  useEffect(() => {
-    setImageLoaded(false)
-  }, [currentIndex])
+  const handleImageLoad = useCallback(() => {
+    setLoadedImages((prev) => new Set(prev).add(currentArtwork._id))
+  }, [currentArtwork._id])
 
   const goNext = useCallback(() => {
     if (hasNext) {
@@ -212,7 +217,7 @@ export default function Lightbox({
                   imageLoaded ? 'opacity-100' : 'opacity-0'
                 }`}
                 priority
-                onLoad={() => setImageLoaded(true)}
+                onLoad={handleImageLoad}
               />
             </motion.div>
           </AnimatePresence>
