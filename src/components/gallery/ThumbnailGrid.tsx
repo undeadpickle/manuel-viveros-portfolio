@@ -73,7 +73,8 @@ export default function ThumbnailGrid({ artworks, lang, onSelect }: ThumbnailGri
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-50px' }}
     >
       {artworks.map((artwork, index) => (
         <motion.div
@@ -81,8 +82,10 @@ export default function ThumbnailGrid({ artworks, lang, onSelect }: ThumbnailGri
           variants={itemVariants}
           className="group cursor-pointer"
           onClick={() => onSelect(index)}
+          whileHover={{ y: -4 }}
+          transition={{ duration: 0.2 }}
         >
-          <div className="relative aspect-square overflow-hidden bg-[var(--color-gray-100)]">
+          <div className="relative aspect-square overflow-hidden bg-[var(--color-gray-100)] rounded-sm shadow-sm group-hover:shadow-lg transition-shadow duration-300">
             {/* Blur placeholder */}
             {!loadedImages.has(artwork._id) && (
               <div

@@ -112,7 +112,7 @@ export default async function ContactPage({ params }: PageProps) {
           <div className="text-center pt-8">
             <a
               href={`mailto:${email}`}
-              className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--color-ink)] text-white hover:bg-[var(--color-accent)] transition-colors rounded-sm"
+              className="btn-primary gap-2 px-8 py-3"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
