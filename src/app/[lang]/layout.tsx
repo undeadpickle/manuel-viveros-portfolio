@@ -1,20 +1,9 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import '../globals.css'
 import { locales, type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/dictionaries'
 import { Header, Footer } from '@/components/layout'
 import { PersonJsonLd, WebsiteJsonLd } from '@/components/seo'
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
+import { LangSetter } from './LangSetter'
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }))
@@ -100,7 +89,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function RootLayout({
+export default async function LangLayout({
   children,
   params,
 }: Readonly<{
@@ -112,18 +101,13 @@ export default async function RootLayout({
   const dictionary = await getDictionary(lang)
 
   return (
-    <html lang={lang}>
-      <head>
-        <PersonJsonLd lang={lang} />
-        <WebsiteJsonLd lang={lang} />
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
-      >
-        <Header lang={lang} dictionary={dictionary} />
-        <main className="flex-1">{children}</main>
-        <Footer lang={lang} dictionary={dictionary} />
-      </body>
-    </html>
+    <>
+      <LangSetter lang={lang} />
+      <PersonJsonLd lang={lang} />
+      <WebsiteJsonLd lang={lang} />
+      <Header lang={lang} dictionary={dictionary} />
+      <main className="flex-1">{children}</main>
+      <Footer lang={lang} dictionary={dictionary} />
+    </>
   )
 }

@@ -3,7 +3,9 @@ export type Locale = (typeof locales)[number]
 
 export const defaultLocale: Locale = 'en'
 
-// Route mappings for localized URLs
+// Route mappings for URLs
+// Note: Currently using English paths for both languages.
+// Spanish localized URLs (pinturas, esculturas, etc.) are planned for future.
 export const routeMap = {
   en: {
     home: '',
@@ -16,12 +18,12 @@ export const routeMap = {
   },
   es: {
     home: '',
-    paintings: 'pinturas',
-    sculptures: 'esculturas',
-    sketches: 'bocetos',
-    photography: 'fotografia',
-    journals: 'diario',
-    contact: 'contacto',
+    paintings: 'paintings',
+    sculptures: 'sculptures',
+    sketches: 'sketches',
+    photography: 'photography',
+    journals: 'journals',
+    contact: 'contact',
   },
 } as const
 
