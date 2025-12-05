@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import '../globals.css'
 import { locales, type Locale } from '@/lib/i18n'
-// import { getDictionary } from '@/dictionaries' // Uncomment when adding Header/Footer
+import { getDictionary } from '@/dictionaries'
+import { Header, Footer } from '@/components/layout'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -70,17 +71,16 @@ export default async function RootLayout({
   params: Promise<{ lang: Locale }>
 }>) {
   const { lang } = await params
-  // Dictionary will be used when Header/Footer components are added
-  // const dictionary = await getDictionary(lang)
+  const dictionary = await getDictionary(lang)
 
   return (
     <html lang={lang}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
-        {/* Header will go here - will use dictionary */}
+        <Header lang={lang} dictionary={dictionary} />
         <main className="flex-1">{children}</main>
-        {/* Footer will go here - will use dictionary */}
+        <Footer lang={lang} dictionary={dictionary} />
       </body>
     </html>
   )
