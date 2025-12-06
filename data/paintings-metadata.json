@@ -1,0 +1,1048 @@
+{
+  "exportedAt": "2025-12-06T00:13:45.482Z",
+  "source": "https://manuel-viveros.wixsite.com/manuelviveros/paintings",
+  "totalCount": 52,
+  "matchedCount": 25,
+  "paintings": [
+    {
+      "order": 1,
+      "localFile": "painting_01.jpg",
+      "wixItemId": "a4039aee-e5eb-4135-bdcb-c66424dc098f",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_04a256f8c9b042dbb8e134ed769a9201~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzusa",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/d6a407ec324ccd70dd360df97244116f1c533303-1139x1500.jpg",
+      "title": {
+        "en": "Painting 01",
+        "es": "Pintura 01"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 2,
+      "localFile": "painting_02.jpg",
+      "wixItemId": "e429678a-807e-440a-b181-9af3c38508ba",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_04a82c7d40754c01bf72cd2d7594b829~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzwFA",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/05be4ddccc81553dade4d2d65bce15fe0b799bf2-1965x2500.jpg",
+      "title": {
+        "en": "La Pollera",
+        "es": "La Pollera"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 3,
+      "localFile": "painting_03.jpg",
+      "wixItemId": "2845d825-e19c-42ec-9440-5c64f41372a1",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_053fd69ddeb04108814caa83507495b8~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzwbE",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/b1f40c20c457837a389fffee446bb77500c1b13c-2500x1951.jpg",
+      "title": {
+        "en": "Painting 03",
+        "es": "Pintura 03"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 4,
+      "localFile": "painting_04.jpg",
+      "wixItemId": "86a86c4a-702b-4ecc-b4a5-b6f3f1e9b0fa",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_067fa3ad37c04197bcb37c637f70fda7~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNIzZ",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/a9d1c6b907d698655ed44c0c1eb03610a0e8e0cb-560x720.jpg",
+      "title": {
+        "en": "Campbell tower",
+        "es": "Campbell tower"
+      },
+      "dimensions": "30x24 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2022,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 5,
+      "localFile": "painting_05.jpg",
+      "wixItemId": "629c308a-e2e7-4b9a-98f9-7f314c999b69",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_32f38b93929146e9933dbaecc220303c~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoJ0A",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/9bd5daac762a79cb391ee89e6ee59cdac6ae7422-2500x1910.jpg",
+      "title": {
+        "en": "Painting 05",
+        "es": "Pintura 05"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "medium"
+    },
+    {
+      "order": 6,
+      "localFile": "painting_06.jpg",
+      "wixItemId": "d1ce479d-f2bc-45e9-81a2-d7c3966a140a",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_15df9b77e0124cc3aa0f4c1687869df0~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzxJM",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/3e5c5640142cf1a1fd6f8c7ef578045eb79c3e83-1952x2500.jpg",
+      "title": {
+        "en": "La vendedora",
+        "es": "La vendedora"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 7,
+      "localFile": "painting_07.jpg",
+      "wixItemId": "c2197030-d6b3-417c-b5b1-131d5e91025a",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_194a4cb564634ae3b9f40678f670b024~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoJLK",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/45d8fe6bef0c62002d88b795d1ce3f5adb1956fe-1500x1085.jpg",
+      "title": {
+        "en": "El solitario",
+        "es": "El solitario"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 8,
+      "localFile": "painting_08.jpg",
+      "wixItemId": "c5b2ddcf-f036-4cbc-b7d1-53d2353d66b0",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_1bffed652dad471c9be3f719d68c3101~mv2.png",
+      "sanityId": "F7SKTIJoDrxSGebUcOoJwM",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/d0732205ac0d1f455a24aa772b3eea4bd94e29f0-1170x1524.jpg",
+      "title": {
+        "en": "Painting 08",
+        "es": "Pintura 08"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 9,
+      "localFile": "painting_09.jpg",
+      "wixItemId": "1d8b0cb2-cf31-4489-8945-78c3da02a293",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_1faab9092f8d45ea88fcaf796d191353~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoKXO",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/99249c26db6009d0dea3af63804e270d9ba98ac2-1125x1500.jpg",
+      "title": {
+        "en": "Painting 09",
+        "es": "Pintura 09"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 10,
+      "localFile": "painting_10.jpg",
+      "wixItemId": "211dd066-3a31-4553-a508-c023ecaea6a5",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_287560faabf2474ca9ca8aa259ed68f4~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoKxq",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/0f573bc274338b12f6da3bcb1409da7d49720ec9-2500x1900.jpg",
+      "title": {
+        "en": "La senora del Cabo",
+        "es": "La senora del Cabo"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2022,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 11,
+      "localFile": "painting_11.jpg",
+      "wixItemId": "f527e30d-ba9b-4558-b114-185e56bbb9ef",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_28bc77819587451e8ecd239611bec4c8~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNJnk",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/fa79c80d659e695ddc2f685ec9b4b1794f5337c3-2020x2500.jpg",
+      "title": {
+        "en": "Painting 11",
+        "es": "Pintura 11"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 12,
+      "localFile": "painting_12.jpg",
+      "wixItemId": "994347f0-67fc-45f7-9376-05ca730c9055",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_294de8ef595d4c91b30af22be423ebc2~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzyUu",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/d94cfc076c5523a87173105bc9bd979af0017916-2500x1968.jpg",
+      "title": {
+        "en": "After the storm, man and dog",
+        "es": "After the storm, man and dog"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 13,
+      "localFile": "painting_13.jpg",
+      "wixItemId": "f181a4fc-dd55-4b5d-9592-91b420f240f1",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_2a0e9521d9074618998ac3acdc2f9509~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNK2V",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/2e4d43a7b29fd0e07c98d3b53bc09ca1519a7380-1146x1500.jpg",
+      "title": {
+        "en": "Fog on Campbell",
+        "es": "Fog on Campbell"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 14,
+      "localFile": "painting_14.jpg",
+      "wixItemId": "da2985b8-5dbf-4c2f-a497-41b64ef73c09",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_2b20182079224a18b580b8665e105089~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzzRk",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/f0515e74394fc5f39249bb023938bf140112a343-2500x2025.jpg",
+      "title": {
+        "en": "Peru",
+        "es": "Peru"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2020,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 15,
+      "localFile": "painting_15.jpg",
+      "wixItemId": "030a8fd2-965f-4093-ac5d-c6672d9f471d",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_2cbab1af8a504208a1afdc206f673342~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkymzzcm",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/c65bd0f661a11062a3b100713d131b3fea0ccf73-1963x2500.jpg",
+      "title": {
+        "en": "Painting 15",
+        "es": "Pintura 15"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 16,
+      "localFile": "painting_16.jpg",
+      "wixItemId": "0c24c2af-5af5-4dc1-9053-ecec495c8a1c",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_3259006f06584a54b244ffd3eecee260~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoMPm",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/ce90176a8221dc017eef3fa17e769c129b03fb92-938x1500.jpg",
+      "title": {
+        "en": "Carmen",
+        "es": "Carmen"
+      },
+      "dimensions": "48x30 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 17,
+      "localFile": "painting_17.jpg",
+      "wixItemId": "2f35de70-d83e-47fe-b923-20e26ff81366",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_7d4654d003df469d98c80d8c9a70f637~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoMfe",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/e427263df77305d71c9a260c743f40b3b702fc4b-1500x1160.jpg",
+      "title": {
+        "en": "Painting 17",
+        "es": "Pintura 17"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "medium"
+    },
+    {
+      "order": 18,
+      "localFile": "painting_18.jpg",
+      "wixItemId": "99816889-10a8-4d23-8525-cbee36c639d8",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_3ea1d015158a454f956e632556e86f15~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkyn002W",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/829336856c37587ce3d85c8f6893fa2964aeefac-2500x1938.jpg",
+      "title": {
+        "en": "Vasona lake",
+        "es": "Vasona lake"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 19,
+      "localFile": "painting_19.jpg",
+      "wixItemId": "e0fac716-84c5-4e11-b396-cf4071f68849",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_4211be3f1af64c34913b96593c3bc6f1~mv2.png",
+      "sanityId": "F7SKTIJoDrxSGebUcOoNWY",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/ea23abe14f3a6f31d43594879dd1a21102137676-1922x2500.jpg",
+      "title": {
+        "en": "Painting 19",
+        "es": "Pintura 19"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 20,
+      "localFile": "painting_20.jpg",
+      "wixItemId": "56618a8b-545d-4812-ae73-7853dc39f871",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_5e8707849290418fa11a28e39f14d41a~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoNx0",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/19cfd05375c5276b713d2b5cb3ef1aa87c095089-1881x2500.jpg",
+      "title": {
+        "en": "At Vasona",
+        "es": "At Vasona"
+      },
+      "dimensions": "18x24 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2022,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 21,
+      "localFile": "painting_21.jpg",
+      "wixItemId": "3660355f-6174-4c24-a060-f78ecf8c3afb",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_6a3b6a68bf4f4154a2058a1cf3340180~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkyn00Zc",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/de78261d75e907a26213b78eddba039c0ac5c0fe-2500x1992.jpg",
+      "title": {
+        "en": "El arbolito",
+        "es": "El arbolito"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 22,
+      "localFile": "painting_22.jpg",
+      "wixItemId": "5f820f0c-583d-4817-9893-dda129011dc2",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_75c7f1251bdc4f9fb7fb79ec4f949bec~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoONS",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/c355e2fb43d2cf0998c7163cdd9a23f1e4db496f-1177x1500.jpg",
+      "title": {
+        "en": "Por Paso Robles",
+        "es": "Por Paso Robles"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2020,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 23,
+      "localFile": "painting_23.jpg",
+      "wixItemId": "27b72776-ff8e-4541-930f-fdd93f5d2f5a",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_775a76ee774a4d5ba3fe850b1ad2c6ae~mv2.png",
+      "sanityId": "F7SKTIJoDrxSGebUcOoOdK",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/e3831a9fc7e5e6df99bee30347762846aa3e4e05-2500x2401.jpg",
+      "title": {
+        "en": "And after the rain",
+        "es": "And after the rain"
+      },
+      "dimensions": "24x24 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 24,
+      "localFile": "painting_24.jpg",
+      "wixItemId": "11312ddb-82f3-4414-b28f-f1a933fbee09",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_793a232e4d36478f8f192612a53d3df9~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNKwa",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/c40ae307fe078fcb8d1b57ad081628436e9b0ec5-1500x858.jpg",
+      "title": {
+        "en": "Painting 24",
+        "es": "Pintura 24"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 25,
+      "localFile": "painting_25.jpg",
+      "wixItemId": "01bac6e3-0a66-479f-b5db-13355646b287",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_7ad9fadd20ee47e0a6ecf01b01639cef~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoPJe",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/db759f9232947e730fe1c7e819ce8584cf54be67-2500x2063.jpg",
+      "title": {
+        "en": "La mujer de Vallarta",
+        "es": "La mujer de Vallarta"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2022,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 26,
+      "localFile": "painting_26.jpg",
+      "wixItemId": "65e2346e-ebaa-4d8d-abec-ceb154b06e61",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_867442f965094a2a846a8bbaaa248e1d~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNLN9",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/afbae52b410d9cc111b6208ba8c959462059bdd0-1116x1500.jpg",
+      "title": {
+        "en": "Painting 26",
+        "es": "Pintura 26"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 27,
+      "localFile": "painting_27.jpg",
+      "wixItemId": "6af2e51f-5bad-444c-bdd3-0a5010845fae",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_882a1c5866b94dc3ac1fd6396d07ecec~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNLbu",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/b3a85e231dcdafe09b3d125252ac59a6de91ae04-1500x1057.jpg",
+      "title": {
+        "en": "La casa roja",
+        "es": "La casa roja"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2022,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 28,
+      "localFile": "painting_28.jpg",
+      "wixItemId": "9a9ebc66-5491-4363-970c-8150e92ca277",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_8b269ba6617245268e02307432f7ef7b~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNMN8",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/3e660aa0657e33970be7f40219b5b4edc53cf837-1154x1500.jpg",
+      "title": {
+        "en": "Painting 28",
+        "es": "Pintura 28"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 29,
+      "localFile": "painting_29.jpg",
+      "wixItemId": "9cad719a-ba15-4939-82fd-d37969569d14",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_9fefe15cbd0940d7b3842d4434d75f0c~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoQwA",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/0dc741d479414751dc1154146b69a02f847f5a00-1500x1142.jpg",
+      "title": {
+        "en": "Yellow shoes",
+        "es": "Yellow shoes"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Mixed media on canvas",
+        "es": "Técnica mixta sobre lienzo"
+      },
+      "year": 2021,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 30,
+      "localFile": "painting_30.jpg",
+      "wixItemId": "d046c4ce-ba3a-4561-a819-c0d085f60363",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_a040ee70f51a4a9a97b219162626952c~mv2_d_1729_2651_s_2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNMnh",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/4455487cd9bb1664c33678ca3ce60543a6927851-1631x2500.jpg",
+      "title": {
+        "en": "Painting 30",
+        "es": "Pintura 30"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 31,
+      "localFile": "painting_31.jpg",
+      "wixItemId": "b172ecba-1c26-44c3-8239-f32b53468760",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_a05df4c48bf549cc83ac8ee6f273fd88~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNMwY",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/2d980c4a4c91cf714acd3ccd185250484ba24cdc-1125x1500.jpg",
+      "title": {
+        "en": "Painting 31",
+        "es": "Pintura 31"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 32,
+      "localFile": "painting_32.jpg",
+      "wixItemId": "8722d6c2-3382-406b-a2c1-74e91f3f5784",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_a48aa4d5e45f40618c7e1477a35cfd03~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNNBJ",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/24fe11fe15392e9da5c8c106d8425305db17fc79-2500x1875.jpg",
+      "title": {
+        "en": "Paso Robles 2023",
+        "es": "Paso Robles 2023"
+      },
+      "dimensions": "18x24 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 33,
+      "localFile": "painting_33.jpg",
+      "wixItemId": "a437a3db-0263-4417-9981-a19bec0866fd",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_a9db58c2d4cd40b69cb00cdf29772dbb~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNNKA",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/3d04a3c4663f782cca3bd4b224bbad4bbfb1d692-580x720.jpg",
+      "title": {
+        "en": "Painting 33",
+        "es": "Pintura 33"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 34,
+      "localFile": "painting_34.jpg",
+      "wixItemId": "ddbfbd0d-9749-4a1f-a25d-52c2c2bccb8b",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_af05a236aa594d4a843b1ccc311d4d24~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoSIo",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/d2620356acc85f7fc34800bf5091af3438db9054-720x540.jpg",
+      "title": {
+        "en": "Painting 34",
+        "es": "Pintura 34"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 35,
+      "localFile": "painting_35.jpg",
+      "wixItemId": "27d47749-a433-4a04-8cba-7695f5f72aae",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_b98a53b16aca4a8a99cb345dad17fa68~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkyn04qO",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/7a019419ec8caffb4aeb788091b37f64cf6b512d-979x1500.jpg",
+      "title": {
+        "en": "Painting 35",
+        "es": "Pintura 35"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 36,
+      "localFile": "painting_36.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "IV9l6c0XgyeDYlbkyn05NU",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/71686462df229e79613167782f89a03808539526-540x720.jpg",
+      "title": {
+        "en": "Painting 36",
+        "es": "Pintura 36"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    },
+    {
+      "order": 37,
+      "localFile": "painting_37.jpg",
+      "wixItemId": "973207b0-613a-47a9-a580-54cf9cc93667",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_be1dc3afc3ef4ca7b9639e1c35cdf0b3~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkyn05fs",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/35ccc282a0b9333e9ed2ccb8822ef9f6ed0f70e7-903x1500.jpg",
+      "title": {
+        "en": "Painting 37",
+        "es": "Pintura 37"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 38,
+      "localFile": "painting_38.jpg",
+      "wixItemId": "cf0c05d9-1500-4df8-bad3-5160dfa74be4",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_c50bb169cb554f39bd9c7bfdc43a4524~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNOeo",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/3de654a2bf17b91668977dd91e2e489ec4497693-540x720.jpg",
+      "title": {
+        "en": "Painting 38",
+        "es": "Pintura 38"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 39,
+      "localFile": "painting_39.jpg",
+      "wixItemId": "a08b45c0-c520-4c4b-84e9-fe185ee6c7e0",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_c7556995b9a34f7ab458de02965a8f6b~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNOnf",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/c4083a997af1749e457509f27a1b871562cd90b5-1940x2500.jpg",
+      "title": {
+        "en": "La marchanta",
+        "es": "La marchanta"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2023,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 40,
+      "localFile": "painting_40.jpg",
+      "wixItemId": "2cd8572b-fd51-462c-9743-93c996c49a67",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_ce4c7b74286c4ae4a4cdab09095add82~mv2.jpg",
+      "sanityId": "F7SKTIJoDrxSGebUcOoU5u",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/01cc9757848cc1185f2c0935121427dcb94159aa-1500x1206.jpg",
+      "title": {
+        "en": "Red ball",
+        "es": "Red ball"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 41,
+      "localFile": "painting_41.jpg",
+      "wixItemId": "d23c8e39-e378-4ceb-a4fd-333b1d20dff4",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_d017cbfe2cd44e429953219818eda1b9~mv2.jpg",
+      "sanityId": "apFzWNhVaH1PUA1NxfNP8K",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/806bbbde0f87f54cc810965012bcdd976b8f65fa-1500x905.jpg",
+      "title": {
+        "en": "La Tarde (large)",
+        "es": "La Tarde (large)"
+      },
+      "dimensions": "30x48 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 42,
+      "localFile": "painting_42.jpg",
+      "wixItemId": "f638d0a0-2930-4482-a61b-1fbdb27a4eaf",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_d47bb638bb1e449680f55f2ba75e42cb~mv2.png",
+      "sanityId": "IV9l6c0XgyeDYlbkyn07zI",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/6781b9c1dc29df0fb6a49aa6709eafca6d697d1a-1125x1500.jpg",
+      "title": {
+        "en": "My girls",
+        "es": "My girls"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 43,
+      "localFile": "painting_43.jpg",
+      "wixItemId": "acd6e5fd-18b1-4aeb-b4e4-43b4d5863158",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_e51e3114d4af4a0a8784c437ba16542e~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkyn08AK",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/9925fb874d2a36f43cf08b8abc33afd0e587d06e-2500x1972.jpg",
+      "title": {
+        "en": "Paso Robles 2024",
+        "es": "Paso Robles 2024"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 44,
+      "localFile": "painting_44.jpg",
+      "wixItemId": "2aee9d5b-b7a2-4006-9281-8779164cbff6",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_e63833e888b24cb2a073310d2a39a32d~mv2.png",
+      "sanityId": "apFzWNhVaH1PUA1NxfNPSz",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/0ef40cd3be586b335c8fb10795198f6fb6196f9f-1500x1124.jpg",
+      "title": {
+        "en": "La tarde",
+        "es": "La tarde"
+      },
+      "dimensions": "16x20 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": "Private collection",
+      "matchConfidence": "high"
+    },
+    {
+      "order": 45,
+      "localFile": "painting_45.jpg",
+      "wixItemId": "50151f13-cc07-4095-b05a-270c53b4dc87",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_f5d2da6e36614537bdd6094e22558ad4~mv2.png",
+      "sanityId": "IV9l6c0XgyeDYlbkyn08hQ",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/a08d7a5052d81ef57ded667a81bb38dc5aa53612-1500x1124.jpg",
+      "title": {
+        "en": "La Rueda",
+        "es": "La Rueda"
+      },
+      "dimensions": "48x60 in",
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": 2021,
+      "notes": null,
+      "matchConfidence": "high"
+    },
+    {
+      "order": 46,
+      "localFile": "painting_46.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "apFzWNhVaH1PUA1NxfNPne",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/06d195cc0412dc59961790789180c8c23172c46f-960x720.jpg",
+      "title": {
+        "en": "Painting 46",
+        "es": "Pintura 46"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    },
+    {
+      "order": 47,
+      "localFile": "painting_47.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "F7SKTIJoDrxSGebUcOoUgw",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/90f65170a0e0ad7b7f5b686c957b60d1262e3b28-696x960.jpg",
+      "title": {
+        "en": "Painting 47",
+        "es": "Pintura 47"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    },
+    {
+      "order": 48,
+      "localFile": "painting_48.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "IV9l6c0XgyeDYlbkyn09TE",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/ab2784346a11419f4958a2d7f0270fb9b73fc20e-720x960.jpg",
+      "title": {
+        "en": "Painting 48",
+        "es": "Pintura 48"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    },
+    {
+      "order": 49,
+      "localFile": "painting_49.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "IV9l6c0XgyeDYlbkyn09eG",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/4890693f9cc1ae05ac5a9fa5e5fe3fc77b662263-720x960.jpg",
+      "title": {
+        "en": "Painting 49",
+        "es": "Pintura 49"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    },
+    {
+      "order": 50,
+      "localFile": "painting_50.jpg",
+      "wixItemId": "4fe89294-8768-4a4c-9adf-806f6fd415a0",
+      "wixImageUrl": "https://static.wixstatic.com/media/a7c938_f3ce879104d34e4dbd6f70e26bef5e97~mv2.jpg",
+      "sanityId": "IV9l6c0XgyeDYlbkyn09we",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/be8d24cb063632abac1254a2e9a3464915a72353-748x960.jpg",
+      "title": {
+        "en": "Painting 50",
+        "es": "Pintura 50"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": "medium"
+    },
+    {
+      "order": 51,
+      "localFile": "painting_51.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "IV9l6c0XgyeDYlbkyn0AQ4",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/f3543f55d762b646abd44a275d8f602446983b43-720x960.jpg",
+      "title": {
+        "en": "Painting 51",
+        "es": "Pintura 51"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    },
+    {
+      "order": 52,
+      "localFile": "painting_52.jpg",
+      "wixItemId": null,
+      "wixImageUrl": null,
+      "sanityId": "F7SKTIJoDrxSGebUcOoVHy",
+      "sanityImageUrl": "https://cdn.sanity.io/images/wrdog046/production/a92e6f0035ac02074c21359edf799ea6fc6f39ba-720x960.jpg",
+      "title": {
+        "en": "Painting 52",
+        "es": "Pintura 52"
+      },
+      "dimensions": null,
+      "medium": {
+        "en": "Oil on canvas",
+        "es": "Óleo sobre lienzo"
+      },
+      "year": null,
+      "notes": null,
+      "matchConfidence": null
+    }
+  ]
+}
