@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useState } from 'react'
 import { getImageUrl, getBlurUrl } from '@/lib/sanity'
 
 export interface Artwork {
@@ -54,12 +53,6 @@ const itemVariants = {
 }
 
 export default function ThumbnailGrid({ artworks, lang, onSelect }: ThumbnailGridProps) {
-  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set())
-
-  const handleImageLoad = (id: string) => {
-    setLoadedImages((prev) => new Set(prev).add(id))
-  }
-
   if (!artworks || artworks.length === 0) {
     return (
       <div className="text-center py-16 text-[var(--color-gray-500)]">
@@ -73,8 +66,7 @@ export default function ThumbnailGrid({ artworks, lang, onSelect }: ThumbnailGri
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6"
       variants={containerVariants}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-50px' }}
+      animate="visible"
     >
       {artworks.map((artwork, index) => (
         <motion.div
@@ -86,25 +78,14 @@ export default function ThumbnailGrid({ artworks, lang, onSelect }: ThumbnailGri
           transition={{ duration: 0.2 }}
         >
           <div className="relative aspect-square overflow-hidden bg-[var(--color-gray-100)] rounded-sm shadow-sm group-hover:shadow-lg transition-shadow duration-300">
-            {/* Blur placeholder */}
-            {!loadedImages.has(artwork._id) && (
-              <div
-                className="absolute inset-0 bg-[var(--color-gray-200)] animate-pulse"
-                aria-hidden="true"
-              />
-            )}
-
             <Image
               src={getImageUrl(artwork.image, 600)}
               alt={artwork.title[lang] || artwork.title.en || 'Artwork'}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-              className={`object-cover transition-all duration-500 group-hover:scale-105 ${
-                loadedImages.has(artwork._id) ? 'opacity-100' : 'opacity-0'
-              }`}
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               placeholder="blur"
               blurDataURL={getBlurUrl(artwork.image)}
-              onLoad={() => handleImageLoad(artwork._id)}
             />
 
             {/* Overlay on hover */}
