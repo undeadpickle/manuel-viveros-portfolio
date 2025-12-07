@@ -5,9 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { client, getImageUrl } from '@/lib/sanity'
-import { featuredArtworkQuery, recentJournalsQuery, siteSettingsQuery } from '@/lib/queries'
+import { featuredArtworkQuery, recentJournalsQuery, siteSettingsQuery, heroSlidesQuery } from '@/lib/queries'
 import { type Locale, getLocalizedValue } from '@/lib/i18n'
 import type { Artwork } from '@/components/gallery'
+import HeroSlideshow from '@/components/hero/HeroSlideshow'
 
 interface Journal {
   _id: string
@@ -19,11 +20,34 @@ interface Journal {
   location?: string
 }
 
+interface HeroSlideshowSettings {
+  enabled?: boolean
+  duration?: number
+  transitionDuration?: number
+  showIndicators?: boolean
+  pauseOnHover?: boolean
+  randomizeOrder?: boolean
+}
+
+interface HeroSlide {
+  _id: string
+  title?: { en?: string; es?: string }
+  slug?: { current?: string }
+  category?: string
+  image: {
+    asset: { _ref: string }
+    hotspot?: { x: number; y: number }
+  }
+  year?: number
+  medium?: { en?: string; es?: string }
+}
+
 interface SiteSettings {
   artistName?: string
   tagline?: { en: string; es: string }
   artistStatement?: { en: string; es: string }
   signature?: { asset: { _ref: string } }
+  heroSlideshow?: HeroSlideshowSettings
 }
 
 interface HomePageClientProps {
@@ -70,20 +94,23 @@ const itemVariants = {
 export default function HomePageClient({ lang, dictionary }: HomePageClientProps) {
   const [featuredArtwork, setFeaturedArtwork] = useState<Artwork[]>([])
   const [recentJournals, setRecentJournals] = useState<Journal[]>([])
+  const [heroSlides, setHeroSlides] = useState<HeroSlide[]>([])
   const [settings, setSettings] = useState<SiteSettings | null>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [artwork, journals, siteSettings] = await Promise.all([
+        const [artwork, journals, siteSettings, slides] = await Promise.all([
           client.fetch(featuredArtworkQuery),
           client.fetch(recentJournalsQuery),
           client.fetch(siteSettingsQuery),
+          client.fetch(heroSlidesQuery),
         ])
         setFeaturedArtwork(artwork || [])
         setRecentJournals(journals || [])
         setSettings(siteSettings)
+        setHeroSlides(slides || [])
       } catch (error) {
         console.error('Error fetching home page data:', error)
       } finally {
@@ -97,38 +124,45 @@ export default function HomePageClient({ lang, dictionary }: HomePageClientProps
     ? getLocalizedValue(settings.artistStatement, lang)
     : null
 
+  // Determine if we should show the slideshow
+  const showSlideshow = heroSlides.length > 0 && settings?.heroSlideshow?.enabled !== false
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <motion.section
-        className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4"
-        initial="hidden"
-        animate="visible"
-        variants={sectionVariants}
-      >
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-wide text-[var(--color-ink)]">
-          Manuel Viveros Segura
-        </h1>
-        <p className="mt-4 text-lg md:text-xl text-[var(--color-gray-500)] tracking-widest uppercase">
-          Arte Latinoamericano
-        </p>
-        {settings?.signature && (
-          <motion.div
-            className="mt-8 opacity-60"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-          >
-            <Image
-              src={getImageUrl(settings.signature, 200)}
-              alt="Signature"
-              width={150}
-              height={60}
-              className="object-contain"
-            />
-          </motion.div>
-        )}
-      </motion.section>
+      {showSlideshow ? (
+        <HeroSlideshow slides={heroSlides} settings={settings?.heroSlideshow} />
+      ) : (
+        <motion.section
+          className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4"
+          initial="hidden"
+          animate="visible"
+          variants={sectionVariants}
+        >
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-wide text-[var(--color-ink)]">
+            Manuel Viveros Segura
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-[var(--color-gray-500)] tracking-widest uppercase">
+            Arte Latinoamericano
+          </p>
+          {settings?.signature && (
+            <motion.div
+              className="mt-8 opacity-60"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              <Image
+                src={getImageUrl(settings.signature, 200)}
+                alt="Signature"
+                width={150}
+                height={60}
+                className="object-contain"
+              />
+            </motion.div>
+          )}
+        </motion.section>
+      )}
 
       {/* Featured Work Section */}
       <motion.section

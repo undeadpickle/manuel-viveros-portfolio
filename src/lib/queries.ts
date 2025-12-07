@@ -34,6 +34,19 @@ export const featuredArtworkQuery = groq`
   }
 `
 
+// Get hero slideshow images (max 6, no videos)
+export const heroSlidesQuery = groq`
+  *[_type == "artwork" && heroSlide == true && !defined(videoUrl)] | order(heroOrder asc) [0...6] {
+    _id,
+    title,
+    slug,
+    category,
+    image,
+    year,
+    medium
+  }
+`
+
 // Get single artwork by slug
 export const artworkBySlugQuery = groq`
   *[_type == "artwork" && slug.current == $slug][0] {
@@ -121,6 +134,7 @@ export const siteSettingsQuery = groq`
     email,
     phone,
     socialLinks,
-    seo
+    seo,
+    heroSlideshow
   }
 `

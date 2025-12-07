@@ -93,6 +93,22 @@ export const artwork = defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'heroSlide',
+      title: 'Hero Slideshow',
+      type: 'boolean',
+      description: 'Feature this artwork in the homepage hero slideshow (max 6)',
+      initialValue: false,
+    }),
+    defineField({
+      name: 'heroOrder',
+      title: 'Hero Slide Order',
+      type: 'number',
+      description: 'Display order in hero (1 = first)',
+      hidden: ({ document }) => !document?.heroSlide,
+      validation: (Rule) => Rule.min(1).max(6),
+      initialValue: 1,
+    }),
+    defineField({
       name: 'order',
       title: 'Display Order / Orden',
       type: 'number',
