@@ -41,9 +41,10 @@ export default function Header({ lang, dictionary }: HeaderProps) {
           {/* Logo / Name */}
           <Link
             href={`/${lang}`}
-            className="text-xl md:text-2xl font-light tracking-wide hover:opacity-70 transition-opacity"
+            className="text-xl md:text-2xl font-bold tracking-widest uppercase hover:opacity-70 transition-opacity"
+            style={{ fontFamily: 'var(--font-raleway)' }}
           >
-            Manuel Viveros
+            Manuel Viveros Segura
           </Link>
 
           {/* Desktop Navigation */}
