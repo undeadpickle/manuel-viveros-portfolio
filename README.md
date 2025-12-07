@@ -68,6 +68,8 @@ Access the content management studio at [http://localhost:3000/studio](http://lo
 │   └── dictionaries/    # UI translations (en.json, es.json)
 ├── sanity/
 │   └── schemas/         # CMS content models
+├── scripts/             # Content migration scripts (Wix → Sanity)
+├── data/                # Migration metadata (generated)
 ├── docs/                # Documentation
 └── CLAUDE.md           # AI assistant context
 ```
