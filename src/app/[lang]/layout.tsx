@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { locales, type Locale } from '@/lib/i18n'
 import { getDictionary } from '@/dictionaries'
-import { Header, Footer } from '@/components/layout'
+import { Header, Footer, ScrollToTop } from '@/components/layout'
 import { PersonJsonLd, WebsiteJsonLd } from '@/components/seo'
 import { LangSetter } from './LangSetter'
 
@@ -102,6 +102,7 @@ export default async function LangLayout({
 
   return (
     <>
+      <ScrollToTop />
       <LangSetter lang={lang} />
       <PersonJsonLd lang={lang} />
       <WebsiteJsonLd lang={lang} />
