@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getImageUrl, getBlurUrl } from '@/lib/sanity'
@@ -30,9 +30,11 @@ interface HeroSlideshowSettings {
 interface HeroSlideshowProps {
   slides: HeroSlide[]
   settings?: HeroSlideshowSettings
+  tagline?: string | null
+  artistName?: string | null
 }
 
-export default function HeroSlideshow({ slides, settings }: HeroSlideshowProps) {
+export default function HeroSlideshow({ slides, settings, tagline, artistName }: HeroSlideshowProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [progress, setProgress] = useState(0)
@@ -56,12 +58,14 @@ export default function HeroSlideshow({ slides, settings }: HeroSlideshowProps) 
     return shuffled
   }
 
-  // Randomize slides on mount if setting is enabled
-  const displaySlides = useMemo(() => {
+  // Use original order for initial render (SSR), randomize after hydration
+  const [displaySlides, setDisplaySlides] = useState(slides)
+
+  // Randomize slides only on client after mount to avoid hydration mismatch
+  useEffect(() => {
     if (randomizeOrder && slides.length > 1) {
-      return shuffleArray(slides)
+      setDisplaySlides(shuffleArray(slides))
     }
-    return slides
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []) // Empty deps = only run once on mount
 
@@ -231,7 +235,7 @@ export default function HeroSlideshow({ slides, settings }: HeroSlideshowProps) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Manuel Viveros Segura
+          {artistName || 'Manuel Viveros Segura'}
         </motion.h1>
         <motion.p
           className="mt-4 text-lg md:text-xl text-white/90 tracking-widest uppercase drop-shadow-md"
@@ -239,7 +243,7 @@ export default function HeroSlideshow({ slides, settings }: HeroSlideshowProps) 
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Arte Latinoamericano
+          {tagline || 'Arte Latinoamericano'}
         </motion.p>
       </div>
 

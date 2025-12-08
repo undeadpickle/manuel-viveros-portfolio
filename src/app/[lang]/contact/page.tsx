@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { client } from '@/lib/sanity'
+import { sanityFetch } from '@/lib/sanity'
 import { siteSettingsQuery } from '@/lib/queries'
 import { getDictionary } from '@/dictionaries'
 import { type Locale } from '@/lib/i18n'
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 async function getSiteSettings(): Promise<SiteSettings | null> {
-  return client.fetch(siteSettingsQuery)
+  return sanityFetch<SiteSettings | null>(siteSettingsQuery)
 }
 
 export default async function ContactPage({ params }: PageProps) {

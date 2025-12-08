@@ -3,9 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { client, getImageUrl } from '@/lib/sanity'
-import { featuredArtworkQuery, recentJournalsQuery, siteSettingsQuery, heroSlidesQuery } from '@/lib/queries'
+import { getImageUrl } from '@/lib/sanity'
 import { type Locale, getLocalizedValue } from '@/lib/i18n'
 import type { Artwork } from '@/components/gallery'
 import HeroSlideshow from '@/components/hero/HeroSlideshow'
@@ -63,6 +61,10 @@ interface HomePageClientProps {
       readMore: string
     }
   }
+  featuredArtwork: Artwork[]
+  recentJournals: Journal[]
+  siteSettings: SiteSettings | null
+  heroSlides: HeroSlide[]
 }
 
 const sectionVariants = {
@@ -91,51 +93,35 @@ const itemVariants = {
   },
 }
 
-export default function HomePageClient({ lang, dictionary }: HomePageClientProps) {
-  const [featuredArtwork, setFeaturedArtwork] = useState<Artwork[]>([])
-  const [recentJournals, setRecentJournals] = useState<Journal[]>([])
-  const [heroSlides, setHeroSlides] = useState<HeroSlide[]>([])
-  const [settings, setSettings] = useState<SiteSettings | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const [artwork, journals, siteSettings, slides] = await Promise.all([
-          client.fetch(featuredArtworkQuery),
-          client.fetch(recentJournalsQuery),
-          client.fetch(siteSettingsQuery),
-          client.fetch(heroSlidesQuery),
-        ])
-        setFeaturedArtwork(artwork || [])
-        setRecentJournals(journals || [])
-        setSettings(siteSettings)
-        setHeroSlides(slides || [])
-      } catch (error) {
-        console.error('Error fetching home page data:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchData()
-  }, [])
-
-  const artistStatement = settings?.artistStatement
-    ? getLocalizedValue(settings.artistStatement, lang)
+export default function HomePageClient({
+  lang,
+  dictionary,
+  featuredArtwork,
+  recentJournals,
+  siteSettings,
+  heroSlides,
+}: HomePageClientProps) {
+  const artistStatement = siteSettings?.artistStatement
+    ? getLocalizedValue(siteSettings.artistStatement, lang)
     : null
 
-  const tagline = settings?.tagline
-    ? getLocalizedValue(settings.tagline, lang)
+  const tagline = siteSettings?.tagline
+    ? getLocalizedValue(siteSettings.tagline, lang)
     : null
 
   // Determine if we should show the slideshow
-  const showSlideshow = heroSlides.length > 0 && settings?.heroSlideshow?.enabled !== false
+  const showSlideshow = heroSlides.length > 0 && siteSettings?.heroSlideshow?.enabled !== false
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       {showSlideshow ? (
-        <HeroSlideshow slides={heroSlides} settings={settings?.heroSlideshow} />
+        <HeroSlideshow
+          slides={heroSlides}
+          settings={siteSettings?.heroSlideshow}
+          tagline={tagline}
+          artistName={siteSettings?.artistName}
+        />
       ) : (
         <motion.section
           className="min-h-[70vh] flex flex-col items-center justify-center text-center px-4"
@@ -144,12 +130,12 @@ export default function HomePageClient({ lang, dictionary }: HomePageClientProps
           variants={sectionVariants}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-wide text-[var(--color-ink)]">
-            Manuel Viveros Segura
+            {siteSettings?.artistName || 'Manuel Viveros Segura'}
           </h1>
           <p className="mt-4 text-lg md:text-xl text-[var(--color-gray-500)] tracking-widest uppercase">
             {tagline || 'Arte Latinoamericano'}
           </p>
-          {settings?.signature && (
+          {siteSettings?.signature && (
             <motion.div
               className="mt-8 opacity-60"
               initial={{ opacity: 0 }}
@@ -157,7 +143,7 @@ export default function HomePageClient({ lang, dictionary }: HomePageClientProps
               transition={{ delay: 0.5, duration: 0.8 }}
             >
               <Image
-                src={getImageUrl(settings.signature, 200)}
+                src={getImageUrl(siteSettings.signature, 200)}
                 alt="Signature"
                 width={150}
                 height={60}
@@ -188,13 +174,7 @@ export default function HomePageClient({ lang, dictionary }: HomePageClientProps
           </Link>
         </div>
 
-        {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="aspect-square bg-[var(--color-gray-100)] animate-pulse" />
-            ))}
-          </div>
-        ) : featuredArtwork.length > 0 ? (
+        {featuredArtwork.length > 0 ? (
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
             variants={staggerContainer}

@@ -1,5 +1,5 @@
 import { createClient } from 'next-sanity'
-import imageUrlBuilder from '@sanity/image-url'
+import { createImageUrlBuilder } from '@sanity/image-url'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SanityImageSource = any
@@ -16,7 +16,7 @@ export const client = createClient({
 })
 
 // Image URL builder
-const builder = imageUrlBuilder(client)
+const builder = createImageUrlBuilder({ projectId, dataset })
 
 export function urlFor(source: SanityImageSource) {
   return builder.image(source)
@@ -47,11 +47,18 @@ export function getBlurUrl(source: SanityImageSource) {
 }
 
 // Server-side fetch with revalidation (for React Server Components)
-// Revalidates cache every 60 seconds by default
+// In development: no caching for immediate updates
+// In production: revalidates cache every 60 seconds
 export async function sanityFetch<T>(
   query: string,
   params?: Record<string, unknown>,
   revalidate = 60
 ): Promise<T> {
-  return client.fetch(query, params, { next: { revalidate } })
+  const isDev = process.env.NODE_ENV === 'development'
+
+  return client.fetch(query, params, {
+    next: isDev
+      ? { revalidate: 0 } // No cache in development
+      : { revalidate }    // Cache with revalidation in production
+  })
 }
