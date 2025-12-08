@@ -46,7 +46,7 @@ src/
 │   ├── layout.tsx           # Root layout (html/body, fonts)
 │   └── globals.css          # Global styles + Tailwind
 ├── components/
-│   ├── layout/              # Header, Footer, PageTransition
+│   ├── layout/              # Header, Footer, PageTransition, ScrollToTop
 │   ├── gallery/             # ThumbnailGrid, Lightbox, GalleryPage
 │   ├── hero/                # HeroSlideshow (homepage)
 │   └── ui/                  # SocialLinks, reusable components

@@ -77,8 +77,8 @@ vercel --prod
 3. Go to API → CORS origins
 4. Add origins (check "Allow credentials" for each):
    - `http://localhost:3000` (for local dev)
-   - `https://manuelviveros.art` (production)
-   - `https://your-project.vercel.app` (preview deploys)
+   - `https://manuel-viveros-portfolio.vercel.app` (Vercel deployment)
+   - `https://manuelviveros.art` (custom domain, when configured)
 
 ## Deployment Workflow
 
@@ -113,7 +113,7 @@ vercel
 
 The Sanity Studio is available at:
 - **Local**: `http://localhost:3000/studio` (when running `npm run dev`)
-- **Production**: `https://your-domain.com/studio`
+- **Production**: `https://manuel-viveros-portfolio.vercel.app/studio`
 
 To enable Studio in production, add your domain to Sanity CORS settings.
 
