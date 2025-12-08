@@ -124,6 +124,10 @@ export default function HomePageClient({ lang, dictionary }: HomePageClientProps
     ? getLocalizedValue(settings.artistStatement, lang)
     : null
 
+  const tagline = settings?.tagline
+    ? getLocalizedValue(settings.tagline, lang)
+    : null
+
   // Determine if we should show the slideshow
   const showSlideshow = heroSlides.length > 0 && settings?.heroSlideshow?.enabled !== false
 
@@ -143,7 +147,7 @@ export default function HomePageClient({ lang, dictionary }: HomePageClientProps
             Manuel Viveros Segura
           </h1>
           <p className="mt-4 text-lg md:text-xl text-[var(--color-gray-500)] tracking-widest uppercase">
-            Arte Latinoamericano
+            {tagline || 'Arte Latinoamericano'}
           </p>
           {settings?.signature && (
             <motion.div
