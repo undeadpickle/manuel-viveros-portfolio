@@ -154,7 +154,8 @@ Lightbox (Portal to document.body)
 
 | Content Type | Caching | Revalidation |
 |-------------|---------|--------------|
-| Static pages | ISR | On-demand via webhook |
+| Server pages | ISR | 60 seconds (via `sanityFetch`) |
+| Client pages | None | Fresh on each load |
 | Images | CDN | Immutable (content-addressed) |
 | Sanity queries | useCdn: true (prod) | Real-time (dev) |
 

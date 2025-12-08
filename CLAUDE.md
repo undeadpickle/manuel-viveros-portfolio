@@ -51,7 +51,7 @@ src/
 │   ├── hero/                # HeroSlideshow (homepage)
 │   └── ui/                  # SocialLinks, reusable components
 ├── lib/
-│   ├── sanity.ts            # Sanity client + image helpers
+│   ├── sanity.ts            # Sanity client, sanityFetch, image helpers
 │   ├── queries.ts           # GROQ queries
 │   └── i18n.ts              # Internationalization utilities
 ├── dictionaries/
@@ -166,7 +166,7 @@ See `.env.example` for full list.
 ## Sanity Studio
 
 - **Local**: `npm run sanity` or visit `http://localhost:3000/studio`
-- **Production**: Will be at `/studio` route
+- **Production**: `https://manuelviveros.art/studio`
 
 ### Content Types
 

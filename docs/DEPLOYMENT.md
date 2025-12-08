@@ -113,17 +113,17 @@ vercel
 
 The Sanity Studio is available at:
 - **Local**: `http://localhost:3000/studio` (when running `npm run dev`)
-- **Production**: `https://manuel-viveros-portfolio.vercel.app/studio`
+- **Production**: `https://manuelviveros.art/studio`
 
-To enable Studio in production, add your domain to Sanity CORS settings.
+Ensure your domain is added to Sanity CORS settings.
 
 ## Content Updates
 
-Content updates in Sanity are **immediately visible** on the site:
+Content updates in Sanity appear on the site after cache revalidation:
 1. Log in to Sanity Studio
 2. Edit content
 3. Click "Publish"
-4. Changes appear on site within seconds (no rebuild needed)
+4. Changes appear within ~60 seconds (no rebuild needed)
 
 ## Monitoring
 
