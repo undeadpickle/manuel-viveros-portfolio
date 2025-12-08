@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { client } from '@/lib/sanity'
+import { sanityFetch } from '@/lib/sanity'
 import { artworkByCategoryQuery } from '@/lib/queries'
 import { GalleryPage } from '@/components/gallery'
 import { getDictionary } from '@/dictionaries'
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 async function getArtworks(): Promise<Artwork[]> {
-  return client.fetch(artworkByCategoryQuery, { category: 'painting' })
+  return sanityFetch<Artwork[]>(artworkByCategoryQuery, { category: 'painting' })
 }
 
 export default async function PaintingsPage({ params }: PageProps) {

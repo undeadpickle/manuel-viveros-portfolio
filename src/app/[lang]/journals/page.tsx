@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { client, getImageUrl } from '@/lib/sanity'
+import { sanityFetch, getImageUrl } from '@/lib/sanity'
 import { allJournalsQuery } from '@/lib/queries'
 import { type Locale, getLocalizedValue } from '@/lib/i18n'
 import Link from 'next/link'
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 async function getJournals(): Promise<Journal[]> {
-  return client.fetch(allJournalsQuery)
+  return sanityFetch<Journal[]>(allJournalsQuery)
 }
 
 export default async function JournalsPage({ params }: PageProps) {

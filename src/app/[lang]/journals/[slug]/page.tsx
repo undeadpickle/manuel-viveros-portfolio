@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PortableText, type PortableTextComponents, type PortableTextBlock } from '@portabletext/react'
-import { client, getImageUrl } from '@/lib/sanity'
+import { client, sanityFetch, getImageUrl } from '@/lib/sanity'
 import { journalBySlugQuery, allJournalSlugsQuery } from '@/lib/queries'
 import { getDictionary } from '@/dictionaries'
 import { type Locale, getLocalizedValue } from '@/lib/i18n'
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 async function getJournal(slug: string): Promise<Journal | null> {
-  return client.fetch(journalBySlugQuery, { slug })
+  return sanityFetch<Journal | null>(journalBySlugQuery, { slug })
 }
 
 // Custom Portable Text components for rich text rendering

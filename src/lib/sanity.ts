@@ -45,3 +45,13 @@ export function getImageUrl(
 export function getBlurUrl(source: SanityImageSource) {
   return builder.image(source).width(20).quality(30).blur(10).url()
 }
+
+// Server-side fetch with revalidation (for React Server Components)
+// Revalidates cache every 60 seconds by default
+export async function sanityFetch<T>(
+  query: string,
+  params?: Record<string, unknown>,
+  revalidate = 60
+): Promise<T> {
+  return client.fetch(query, params, { next: { revalidate } })
+}
