@@ -4,6 +4,15 @@ import { getDictionary } from '@/dictionaries'
 import { Header, Footer, ScrollToTop } from '@/components/layout'
 import { PersonJsonLd, WebsiteJsonLd } from '@/components/seo'
 import { LangSetter } from './LangSetter'
+import { sanityFetch } from '@/lib/sanity'
+import { siteSettingsQuery } from '@/lib/queries'
+
+interface SiteSettings {
+  artistName?: string
+  email?: string
+  phone?: string
+  socialLinks?: Array<{ platform: string; url: string }>
+}
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }))
@@ -98,7 +107,10 @@ export default async function LangLayout({
 }>) {
   const { lang: langParam } = await params
   const lang = langParam as Locale
-  const dictionary = await getDictionary(lang)
+  const [dictionary, siteSettings] = await Promise.all([
+    getDictionary(lang),
+    sanityFetch<SiteSettings | null>(siteSettingsQuery),
+  ])
 
   return (
     <>
@@ -106,9 +118,9 @@ export default async function LangLayout({
       <LangSetter lang={lang} />
       <PersonJsonLd lang={lang} />
       <WebsiteJsonLd lang={lang} />
-      <Header lang={lang} dictionary={dictionary} />
+      <Header lang={lang} dictionary={dictionary} siteSettings={siteSettings} />
       <main className="flex-1">{children}</main>
-      <Footer lang={lang} dictionary={dictionary} />
+      <Footer lang={lang} dictionary={dictionary} siteSettings={siteSettings} />
     </>
   )
 }

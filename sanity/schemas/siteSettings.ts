@@ -69,6 +69,7 @@ export const siteSettings = defineType({
                   { title: 'Twitter/X', value: 'twitter' },
                   { title: 'LinkedIn', value: 'linkedin' },
                   { title: 'Behance', value: 'behance' },
+                  { title: 'Google Photos', value: 'google' },
                 ],
               },
             },

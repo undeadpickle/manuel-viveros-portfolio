@@ -10,9 +10,12 @@ import type { Dictionary } from '@/dictionaries'
 interface HeaderProps {
   lang: Locale
   dictionary: Dictionary
+  siteSettings?: {
+    artistName?: string
+  } | null
 }
 
-export default function Header({ lang, dictionary }: HeaderProps) {
+export default function Header({ lang, dictionary, siteSettings }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
 
@@ -44,7 +47,7 @@ export default function Header({ lang, dictionary }: HeaderProps) {
             className="text-xl md:text-2xl font-bold tracking-widest uppercase hover:opacity-70 transition-opacity"
             style={{ fontFamily: 'var(--font-raleway)' }}
           >
-            Manuel Viveros Segura
+            {siteSettings?.artistName || 'Manuel Viveros Segura'}
           </Link>
 
           {/* Desktop Navigation */}
