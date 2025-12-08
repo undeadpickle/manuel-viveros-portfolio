@@ -48,6 +48,7 @@ src/
 ├── components/
 │   ├── layout/              # Header, Footer, PageTransition
 │   ├── gallery/             # ThumbnailGrid, Lightbox, GalleryPage
+│   ├── hero/                # HeroSlideshow (homepage)
 │   └── ui/                  # SocialLinks, reusable components
 ├── lib/
 │   ├── sanity.ts            # Sanity client + image helpers
@@ -110,6 +111,31 @@ All gallery pages follow the same pattern:
 2. Display in responsive grid (ThumbnailGrid component)
 3. Click opens Lightbox with prev/next navigation
 
+### Hero Slideshow
+
+Full-screen autoplaying slideshow on homepage featuring selected artworks.
+
+**Features:**
+- Crossfade transitions with Ken Burns effect (subtle zoom)
+- Progress bar indicators
+- Pause on hover, keyboard navigation (arrow keys)
+- Respects `prefers-reduced-motion`
+- CMS toggle to randomize slide order on each page load
+
+**CMS fields (artwork schema):**
+- `heroSlide`: Boolean to include artwork in hero
+- `heroOrder`: Display order (1-6, only shown when heroSlide is true)
+
+**CMS settings (siteSettings):**
+- `heroSlideshow.enabled`: Toggle slideshow on/off
+- `heroSlideshow.duration`: Seconds per slide (2-15)
+- `heroSlideshow.transitionDuration`: Crossfade duration in ms (300-2000)
+- `heroSlideshow.showIndicators`: Show/hide progress bars
+- `heroSlideshow.pauseOnHover`: Pause when mouse hovers
+- `heroSlideshow.randomizeOrder`: Shuffle slides on each page load
+
+**Limits:** Max 6 slides, images only (no videos)
+
 ### Images
 
 Images are served via Sanity CDN with automatic optimization:
@@ -144,9 +170,9 @@ See `.env.example` for full list.
 
 ### Content Types
 
-- **Artwork**: Paintings, sculptures, sketches, photography (categorized)
+- **Artwork**: Paintings, sculptures, sketches, photography (categorized). Includes `heroSlide` and `heroOrder` fields for homepage slideshow.
 - **Journal**: Combined travel stories and blog posts
-- **Site Settings**: Contact info, social links, artist statement, SEO
+- **Site Settings**: Contact info, social links, artist statement, SEO, hero slideshow settings
 
 ## Color Palette
 

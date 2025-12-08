@@ -5,6 +5,7 @@ A minimalist, bilingual portfolio website for artist Manuel Viveros Segura, show
 ## Features
 
 - **Bilingual** - English (default) and Spanish
+- **Hero Slideshow** - Full-screen autoplaying slideshow with CMS-controlled settings
 - **Gallery System** - Thumbnail grid with lightbox slideshow
 - **CMS Integration** - Sanity.io for easy content management
 - **SEO Optimized** - Dynamic meta tags, structured data, sitemap
