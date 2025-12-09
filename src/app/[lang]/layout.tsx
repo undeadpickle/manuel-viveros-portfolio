@@ -116,7 +116,7 @@ export default async function LangLayout({
     <>
       <ScrollToTop />
       <LangSetter lang={lang} />
-      <PersonJsonLd lang={lang} />
+      <PersonJsonLd lang={lang} socialLinks={siteSettings?.socialLinks} />
       <WebsiteJsonLd lang={lang} />
       <Header lang={lang} dictionary={dictionary} siteSettings={siteSettings} />
       <main className="flex-1">{children}</main>
