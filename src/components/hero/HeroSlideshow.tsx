@@ -198,6 +198,7 @@ export default function HeroSlideshow({ slides, settings, tagline, artistName }:
         <motion.div
           key={currentIndex}
           className="absolute inset-0"
+          style={{ willChange: 'transform, opacity' }}
           variants={slideVariants}
           initial="enter"
           animate="center"
@@ -213,7 +214,7 @@ export default function HeroSlideshow({ slides, settings, tagline, artistName }:
               src={getImageUrl(currentSlide.image, 1920, 1080, 85)}
               alt={currentSlide.title?.en || currentSlide.title?.es || 'Artwork'}
               fill
-              priority={currentIndex === 0}
+              priority
               className="object-cover"
               sizes="100vw"
               placeholder="blur"
