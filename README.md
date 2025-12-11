@@ -9,6 +9,7 @@ A minimalist, bilingual portfolio website for artist Manuel Viveros Segura, show
 - **Gallery System** - Thumbnail grid with lightbox slideshow
 - **CMS Integration** - Sanity.io for easy content management
 - **SEO Optimized** - Dynamic meta tags, structured data, sitemap
+- **Analytics** - Vercel Analytics for visitor insights
 - **Mobile First** - Responsive design across all devices
 - **Performance** - Image optimization via Sanity CDN
 

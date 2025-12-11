@@ -22,6 +22,7 @@ npm run lint         # ESLint
 - **Styling**: Tailwind CSS v4
 - **CMS**: Sanity.io (headless)
 - **Animations**: Framer Motion
+- **Analytics**: Vercel Analytics (free tier)
 - **Deployment**: Vercel
 
 ## Project Structure
@@ -135,6 +136,8 @@ Full-screen autoplaying slideshow on homepage featuring selected artworks.
 - `heroSlideshow.randomizeOrder`: Shuffle slides on each page load
 
 **Limits:** Max 6 slides, images only (no videos)
+
+**Animation note:** Global CSS transitions in `globals.css` exclude `opacity` and `transform` to avoid conflicts with Framer Motion animations.
 
 ### Images
 
