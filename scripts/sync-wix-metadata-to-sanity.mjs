@@ -212,7 +212,6 @@ function parseDescription(desc) {
   }
 
   // Extract notes (private collection, etc.)
-  const notesMatch = cleaned.match(/\(\s*([^)]+)\s*\)|private\s*collection/i)
   let notes = null
   if (/private\s*collection/i.test(cleaned)) {
     notes = 'Private collection'

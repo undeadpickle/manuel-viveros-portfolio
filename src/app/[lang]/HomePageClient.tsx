@@ -5,40 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getImageUrl } from '@/lib/sanity'
 import { type Locale, getLocalizedValue } from '@/lib/i18n'
+import { getCategoryRoute } from '@/lib/category-routes'
 import type { Artwork } from '@/components/gallery'
+import type { Journal, HeroSlide, HeroSlideshowSettings } from '@/types'
 import HeroSlideshow from '@/components/hero/HeroSlideshow'
-
-interface Journal {
-  _id: string
-  title: { en: string; es: string }
-  slug: { current: string }
-  publishedAt: string
-  coverImage?: { asset: { _ref: string } }
-  excerpt?: { en: string; es: string }
-  location?: string
-}
-
-interface HeroSlideshowSettings {
-  enabled?: boolean
-  duration?: number
-  transitionDuration?: number
-  showIndicators?: boolean
-  pauseOnHover?: boolean
-  randomizeOrder?: boolean
-}
-
-interface HeroSlide {
-  _id: string
-  title?: { en?: string; es?: string }
-  slug?: { current?: string }
-  category?: string
-  image: {
-    asset: { _ref: string }
-    hotspot?: { x: number; y: number }
-  }
-  year?: number
-  medium?: { en?: string; es?: string }
-}
 
 interface SiteSettings {
   artistName?: string
@@ -184,7 +154,7 @@ export default function HomePageClient({
           >
             {featuredArtwork.slice(0, 8).map((artwork) => (
               <motion.div key={artwork._id} variants={itemVariants} className="group">
-                <Link href={`/${lang}/${artwork.category === 'painting' ? 'paintings' : artwork.category === 'sculpture' ? 'sculptures' : artwork.category === 'sketch' ? 'sketches' : 'photography'}`}>
+                <Link href={`/${lang}/${getCategoryRoute(artwork.category)}`}>
                   <div className="relative aspect-square overflow-hidden bg-[var(--color-gray-100)]">
                     <Image
                       src={getImageUrl(artwork.image, 400)}

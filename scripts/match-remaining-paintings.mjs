@@ -1,4 +1,3 @@
-import { createClient } from '@sanity/client'
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -17,14 +16,6 @@ envContent.split('\n').forEach(line => {
   if (key && !key.startsWith('#')) {
     env[key.trim()] = valueParts.join('=').trim()
   }
-})
-
-const client = createClient({
-  projectId: env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-01-01',
-  token: env.SANITY_API_TOKEN,
-  useCdn: false,
 })
 
 const IMAGES_DIR = path.join(__dirname, '../public/images/paintings/optimized')
@@ -164,7 +155,7 @@ async function getImageHash(imagePath) {
       hash += data[i] >= avg ? '1' : '0'
     }
     return hash
-  } catch (error) {
+  } catch {
     return null
   }
 }

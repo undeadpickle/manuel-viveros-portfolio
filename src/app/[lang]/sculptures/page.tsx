@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { sanityFetch } from '@/lib/sanity'
 import { artworkByCategoryQuery } from '@/lib/queries'
 import { GalleryPage } from '@/components/gallery'
-import { getDictionary } from '@/dictionaries'
-import type { Locale } from '@/lib/i18n'
+import { validateLocale } from '@/lib/i18n'
 import type { Artwork } from '@/components/gallery'
 import { CollectionJsonLd } from '@/components/seo'
 
@@ -13,7 +12,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
 
   const titles = {
     en: 'Sculptures',
@@ -41,11 +40,8 @@ async function getArtworks(): Promise<Artwork[]> {
 
 export default async function SculpturesPage({ params }: PageProps) {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
-  const [artworks] = await Promise.all([
-    getArtworks(),
-    getDictionary(lang),
-  ])
+  const lang = validateLocale(langParam)
+  const artworks = await getArtworks()
 
   const titles = {
     en: 'Sculptures',

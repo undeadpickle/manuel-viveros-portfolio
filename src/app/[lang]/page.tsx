@@ -1,32 +1,10 @@
 import { getDictionary } from '@/dictionaries'
-import { type Locale } from '@/lib/i18n'
+import { validateLocale } from '@/lib/i18n'
 import { sanityFetch } from '@/lib/sanity'
 import { featuredArtworkQuery, recentJournalsQuery, siteSettingsQuery, heroSlidesQuery } from '@/lib/queries'
 import type { Artwork } from '@/components/gallery'
+import type { Journal, HeroSlide } from '@/types'
 import HomePageClient from './HomePageClient'
-
-interface Journal {
-  _id: string
-  title: { en: string; es: string }
-  slug: { current: string }
-  publishedAt: string
-  coverImage?: { asset: { _ref: string } }
-  excerpt?: { en: string; es: string }
-  location?: string
-}
-
-interface HeroSlide {
-  _id: string
-  title?: { en?: string; es?: string }
-  slug?: { current?: string }
-  category?: string
-  image: {
-    asset: { _ref: string }
-    hotspot?: { x: number; y: number }
-  }
-  year?: number
-  medium?: { en?: string; es?: string }
-}
 
 interface SiteSettings {
   artistName?: string
@@ -49,7 +27,7 @@ export default async function HomePage({
   params: Promise<{ lang: string }>
 }) {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
 
   // Fetch all data server-side with revalidation (60s default)
   const [dictionary, featuredArtwork, recentJournals, siteSettings, heroSlides] = await Promise.all([

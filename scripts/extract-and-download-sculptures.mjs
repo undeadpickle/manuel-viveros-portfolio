@@ -181,9 +181,6 @@ async function main() {
     // Build full-resolution URL
     const wixImageUrl = `https://static.wixstatic.com/media/${sculpture.mediaUrl}`
 
-    // Try to get higher resolution
-    const highResUrl = wixImageUrl.replace(/\/v1\/fill\/[^/]+\//, '/v1/fill/w_2000,h_2000,q_90/')
-
     const item = {
       order: sculpture.order,
       localFile: filename,

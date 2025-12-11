@@ -279,7 +279,7 @@ function downloadImage(url, filepath) {
 async function getImageHash(imagePath) {
   try {
     // Resize to small grid and get raw pixels
-    const { data, info } = await sharp(imagePath)
+    const { data } = await sharp(imagePath)
       .resize(8, 8, { fit: 'fill' })
       .grayscale()
       .raw()

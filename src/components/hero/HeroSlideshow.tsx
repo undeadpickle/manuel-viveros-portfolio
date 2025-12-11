@@ -4,28 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getImageUrl, getBlurUrl } from '@/lib/sanity'
-
-interface HeroSlide {
-  _id: string
-  title?: { en?: string; es?: string }
-  slug?: { current?: string }
-  category?: string
-  image: {
-    asset: { _ref: string }
-    hotspot?: { x: number; y: number }
-  }
-  year?: number
-  medium?: { en?: string; es?: string }
-}
-
-interface HeroSlideshowSettings {
-  enabled?: boolean
-  duration?: number
-  transitionDuration?: number
-  showIndicators?: boolean
-  pauseOnHover?: boolean
-  randomizeOrder?: boolean
-}
+import type { HeroSlide, HeroSlideshowSettings } from '@/types'
 
 interface HeroSlideshowProps {
   slides: HeroSlide[]

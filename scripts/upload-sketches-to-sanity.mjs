@@ -44,7 +44,7 @@ const OFFSET = getArg('offset') || 0  // e.g., --offset 25
 let sketchData
 try {
   sketchData = JSON.parse(fs.readFileSync(DATA_FILE, 'utf-8'))
-} catch (error) {
+} catch {
   console.error(`Error loading data file: ${DATA_FILE}`)
   console.error('Run extract-and-download-sketches.mjs first.')
   process.exit(1)
@@ -146,7 +146,6 @@ async function main() {
   })
 
   // Apply offset and limit for batch processing
-  const totalAvailable = sketchesToUpload.length
   sketchesToUpload = sketchesToUpload.slice(OFFSET, LIMIT ? OFFSET + LIMIT : undefined)
 
   if (LIMIT || OFFSET) {

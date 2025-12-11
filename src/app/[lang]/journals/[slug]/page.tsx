@@ -6,20 +6,8 @@ import { PortableText, type PortableTextComponents, type PortableTextBlock } fro
 import { client, sanityFetch, getImageUrl } from '@/lib/sanity'
 import { journalBySlugQuery, allJournalSlugsQuery } from '@/lib/queries'
 import { getDictionary } from '@/dictionaries'
-import { type Locale, getLocalizedValue } from '@/lib/i18n'
-
-interface Journal {
-  _id: string
-  title: { en: string; es: string }
-  slug: { current: string }
-  publishedAt: string
-  coverImage?: { asset: { _ref: string } }
-  excerpt?: { en: string; es: string }
-  content?: { en: PortableTextBlock[]; es: PortableTextBlock[] }
-  gallery?: { asset: { _ref: string } }[]
-  location?: string
-  tags?: string[]
-}
+import { validateLocale, getLocalizedValue } from '@/lib/i18n'
+import type { Journal } from '@/types'
 
 interface PageProps {
   params: Promise<{ lang: string; slug: string }>
@@ -36,7 +24,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang: langParam, slug } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
   const journal: Journal | null = await client.fetch(journalBySlugQuery, { slug })
 
   if (!journal) {
@@ -141,7 +129,7 @@ const portableTextComponents: PortableTextComponents = {
 
 export default async function JournalDetailPage({ params }: PageProps) {
   const { lang: langParam, slug } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
   const [journal, dictionary] = await Promise.all([
     getJournal(slug),
     getDictionary(lang),

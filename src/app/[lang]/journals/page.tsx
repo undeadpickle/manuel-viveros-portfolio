@@ -1,20 +1,10 @@
 import type { Metadata } from 'next'
 import { sanityFetch, getImageUrl } from '@/lib/sanity'
 import { allJournalsQuery } from '@/lib/queries'
-import { type Locale, getLocalizedValue } from '@/lib/i18n'
+import { validateLocale, getLocalizedValue } from '@/lib/i18n'
+import type { Journal } from '@/types'
 import Link from 'next/link'
 import Image from 'next/image'
-
-interface Journal {
-  _id: string
-  title: { en: string; es: string }
-  slug: { current: string }
-  publishedAt: string
-  coverImage?: { asset: { _ref: string } }
-  excerpt?: { en: string; es: string }
-  location?: string
-  tags?: string[]
-}
 
 interface PageProps {
   params: Promise<{ lang: string }>
@@ -22,7 +12,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
 
   const titles = {
     en: 'Journals',
@@ -50,7 +40,7 @@ async function getJournals(): Promise<Journal[]> {
 
 export default async function JournalsPage({ params }: PageProps) {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
   const journals = await getJournals()
 
   const titles = {

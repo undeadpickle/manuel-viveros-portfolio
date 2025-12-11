@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { sanityFetch } from '@/lib/sanity'
 import { siteSettingsQuery } from '@/lib/queries'
 import { getDictionary } from '@/dictionaries'
-import { type Locale } from '@/lib/i18n'
+import { validateLocale } from '@/lib/i18n'
 import { SocialLinks } from '@/components/ui'
 
 interface SiteSettings {
@@ -17,7 +17,7 @@ interface PageProps {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
 
   const titles = {
     en: 'Contact',
@@ -45,7 +45,7 @@ async function getSiteSettings(): Promise<SiteSettings | null> {
 
 export default async function ContactPage({ params }: PageProps) {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
   const [settings, dictionary] = await Promise.all([
     getSiteSettings(),
     getDictionary(lang),

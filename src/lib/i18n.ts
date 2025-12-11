@@ -3,6 +3,14 @@ export type Locale = (typeof locales)[number]
 
 export const defaultLocale: Locale = 'en'
 
+/**
+ * Validates a locale string and returns a valid Locale.
+ * Falls back to defaultLocale if invalid.
+ */
+export function validateLocale(lang: string): Locale {
+  return (locales as readonly string[]).includes(lang) ? (lang as Locale) : defaultLocale
+}
+
 // Route mappings for URLs
 // Note: Currently using English paths for both languages.
 // Spanish localized URLs (pinturas, esculturas, etc.) are planned for future.

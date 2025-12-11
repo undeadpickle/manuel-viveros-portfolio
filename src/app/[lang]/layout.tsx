@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { locales, type Locale } from '@/lib/i18n'
+import { locales, validateLocale } from '@/lib/i18n'
 import { getDictionary } from '@/dictionaries'
 import { Header, Footer, ScrollToTop } from '@/components/layout'
 import { PersonJsonLd, WebsiteJsonLd } from '@/components/seo'
@@ -24,7 +24,7 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>
 }): Promise<Metadata> {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
 
   const titles = {
     en: 'Manuel Viveros Segura | Visual Artist',
@@ -106,7 +106,7 @@ export default async function LangLayout({
   params: Promise<{ lang: string }>
 }>) {
   const { lang: langParam } = await params
-  const lang = langParam as Locale
+  const lang = validateLocale(langParam)
   const [dictionary, siteSettings] = await Promise.all([
     getDictionary(lang),
     sanityFetch<SiteSettings | null>(siteSettingsQuery),
